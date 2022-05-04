@@ -40,7 +40,11 @@ class AmphibianViewModel : ViewModel() {
     val amphibian : LiveData<Amphibian> = _amphibian
     // TODO: Create a function that gets a list of amphibians from the api service and sets the
     //  status via a Coroutine
-    fun getAmphibianList(){
+//    init {
+//        getAmphibianList()
+//    }
+//    private fun getAmphibianList(){
+     fun getAmphibianList(){
         viewModelScope.launch {
         _status.value = AmphibianApiStatus.LOADING
             try {
